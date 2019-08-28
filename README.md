@@ -6,7 +6,7 @@
 
 import React from 'react'
 
-import { TwilioLogo, useCounter, useDocumentTitle } from '@GITHUB-USERNAME/react-use-the-things'
+import { TwilioLogo, useCounter, useDocumentTitle } from '@pmcdevitt/react-helper'
 
 const App = () => {
   const [count, setCount] = useCounter(4)
