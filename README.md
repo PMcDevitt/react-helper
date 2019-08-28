@@ -1,34 +1,30 @@
 # @pmcdevitt/react-helper
 
-> React components 
+> React components https://www.twilio.com/blog/release-custom-react-component-hook-effect-npm-package
 
-[![NPM](https://img.shields.io/npm/v/@pmcdevitt/react-helper.svg)](https://www.npmjs.com/package/@pmcdevitt/react-helper) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Usage...
 
-## Install
+import React from 'react'
 
-```bash
-npm install --save @pmcdevitt/react-helper
-```
+import { TwilioLogo, useCounter, useDocumentTitle } from '@GITHUB-USERNAME/react-use-the-things'
 
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import { useMyHook } from '@pmcdevitt/react-helper'
-
-const Example = () => {
-  const example = useMyHook()
+const App = () => {
+  const [count, setCount] = useCounter(4)
+  useDocumentTitle(count)
   return (
-    <div>{example}</div>
+        <div>
+          <TwilioLogo
+            height='240px'
+            width='520px'
+            customStyles={{ border: '1px solid black' }}
+        />
+        <p>Currently, the count is: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Add 1</button>
+        <button onClick={() => setCount(count - 1)}>Subtract 1</button>
+        </div>
   )
 }
-```
 
 ## License
 
-MIT © [PMcDevitt](https://github.com/PMcDevitt)
-
----
-
-This hook is created using [create-react-hook](https://github.com/hermanya/create-react-hook).
+MIT © [@PMcDevitt](https://github.com/PMcDevitt)
